@@ -124,5 +124,4 @@ def about():
 def contact():
     return render_template("contact.html", user=current_user if current_user.is_authenticated else None)
 
-if __name__ == "__main__":
-    app.run(debug=True)
+app=app
