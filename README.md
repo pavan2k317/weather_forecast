@@ -17,7 +17,7 @@ A web-based Weather Forecast App built with **Flask**, **MongoDB**, and the **Op
 ## 🔧 Tech Stack
 
 - **Backend:** Python (Flask)
-- **Frontend:** HTML, CSS (Jinja templates)
+- **Frontend:** HTML, CSS 
 - **Database:** MongoDB (via PyMongo)
 - **API:** OpenWeatherMap
 - **User Auth:** Flask-Login
@@ -28,7 +28,7 @@ A web-based Weather Forecast App built with **Flask**, **MongoDB**, and the **Op
 
 ### 1. Clone the Repository
 ```bash
-git clone https://github.com/your-username/weather_app.git
+[git clone https://github.com/your-username/weather_app.git](https://github.com/pavan2k317/weather_forecast.git)
 cd weather_app
 ```
 
