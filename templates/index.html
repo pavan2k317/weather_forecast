@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Weather Dashboard</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap" rel="stylesheet">
+</head>
+<body class="bg-dark text-white">
+
+  <nav class="navbar">
+    <ul class="navbar-links">
+      <li><a href="{{ url_for('home') }}">Home</a></li>
+      <li><a href="{{ url_for('about') }}">About</a></li>
+      <li><a href="{{ url_for('contact') }}">Contact</a></li>
+      <li><a href="{{ url_for('logout') }}">Logout</a></li>
+    </ul>
+
+  </nav>
+
+  <div class="container">
+    <h2 class="text-center mb-4">Current Weather</h2>
+
+    <form method="POST" action="/" class="search-form">
+      <input type="text" name="city" placeholder="Enter city" required>
+      <button type="submit">Get Weather</button>
+    </form>
+
+   {% if weather %}
+  {% if weather.error %}
+    <p style="color: red;">{{ weather.error }}</p>
+  {% else %}
+    <div class="weather-card">
+      <h2>{{ weather.search_city }} ({{ weather.country }})</h2>
+      <img src="http://openweathermap.org/img/wn/{{ weather.icon }}@2x.png" alt="weather icon">
+        <div class="weather-details">
+            <div class="detail">
+      <p><strong>Temperature:</strong> {{ weather.temperature }}°C</p></div>
+      <div class="detail"><p><strong>Feels Like:</strong> {{ weather.feels_like }}°C</p></div>
+      <div class="detail"><p><strong>Description:</strong> {{ weather.description }}</p></div>
+      <div class="detail"><p><strong>Humidity:</strong> {{ weather.humidity }}%</p></div>
+      <div class="detail"><p><strong>Wind Speed:</strong> {{ weather.wind }} m/s</p></div>
+      <div class="detail"><p><strong>Pressure:</strong> {{ weather.pressure }} hPa</p></div>
+      <div class="detail"><p><strong>Cloud Coverage:</strong> {{ weather.clouds }}%</p></div>
+
+        </div>
+    </div>
+  {% endif %}
+{% endif %}
+
+
+  </div>
+</body>
+</html>

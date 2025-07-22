@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>About</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+  <style>
+
+
+    .container {
+      max-width: 700px;
+      margin: 60px auto;
+      padding: 40px;
+      background: white;
+      border-radius: 12px;
+      box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+      text-align: center;
+    }
+
+    .container h2 {
+      color: #00796b;
+      margin-bottom: 20px;
+    }
+
+    .container p {
+      font-size: 18px;
+      line-height: 1.6;
+      color: #444;
+    }
+
+    @media (max-width: 768px) {
+      .container {
+        margin: 40px 20px;
+        padding: 30px 20px;
+      }
+
+
+    }
+  </style>
+</head>
+<body>
+  <nav class="navbar">
+    <ul class="navbar-links">
+      <li><a href="{{ url_for('home') }}">Home</a></li>
+      <li><a href="{{ url_for('about') }}">About</a></li>
+      <li><a href="{{ url_for('contact') }}">Contact</a></li>
+      <li><a href="{{ url_for('logout') }}">Logout</a></li>
+    </ul>
+  </nav>
+
+  <div class="container">
+    <h2>About This App</h2>
+    <p>This Weather Forecast App provides real-time weather conditions for any city across the globe using the OpenWeatherMap API. Built with Flask and MongoDB, it includes secure authentication, full weather reports, and a clean responsive design.</p>
+  </div>
+</body>
+</html>

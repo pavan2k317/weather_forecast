@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Contact</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+</head>
+<body>
+  <nav class="navbar">
+    <ul class="navbar-links">
+      <li><a href="{{ url_for('home') }}">Home</a></li>
+      <li><a href="{{ url_for('about') }}">About</a></li>
+      <li><a href="{{ url_for('contact') }}">Contact</a></li>
+      <li><a href="{{ url_for('logout') }}">Logout</a></li>
+    </ul>
+
+  </nav>
+  <div class="container">
+    <h2>Contact Us</h2>
+    <p>Email: support@weatherapp.com</p>
+    <p>Phone: +91-9876543210</p>
+    <p>Location: Hyderabad, India</p>
+  </div>
+</body>
+</html>
